@@ -21,9 +21,9 @@ TERRAFORM/
 
 PODUCTION-READY SETUP
 
-infra/
+TERRAFORM/
 │
-├── main/                     
+├── ec2/                     
 │   ├── main.tf # gets right env from envs/backend.hcl
 │   ├── variables.tf
 │   ├── outputs.tf
