@@ -1,1 +1,45 @@
 # terraform
+
+# CURRENT SETUP
+TERRAFORM/
+│
+├── ec2/
+│   ├── main.tf
+│   ├── variable.tf
+│   ├── outputs.tf
+|   ├── backend.tf
+|   ├── provider.tf
+|   ├── terraform.tfvars
+│   └── modules/
+│       └── ec2/
+│       ├── network/
+│       ├── security/
+│           
+│
+└── envs/
+    ├── dev/
+    ├── staging/
+    └── prod/
+
+# PODUCTION-READY SETUP
+
+infra/
+│
+├── main/                     
+│   ├── main.tf # gets right env from envs/backend.hcl
+│   ├── variables.tf
+│   ├── outputs.tf
+│   └── modules/              
+│
+└── envs/
+    ├── dev/
+    │   ├── backend.hcl
+    │   └── terraform.tfvars
+    │
+    ├── staging/
+    │   ├── backend.hcl
+    │   └── terraform.tfvars
+    │
+    └── prod/
+        ├── backend.hcl
+        └── terraform.tfvars
